@@ -1,4 +1,4 @@
-function(){
-	"use strict";
-	console.log('hello from functions js');
-}();
+(function(){
+	"use strict"
+	console.log('Hi from functions js');
+})();

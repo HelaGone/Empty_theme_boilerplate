@@ -33,3 +33,12 @@ register_meta( $object_type, 'podcast_dur_meta', $args1 );
 
 register_meta( $object_type, 'podcast_video_url_meta', $args1 );
 register_meta( $object_type, 'podcast_video_dur_meta', $args1 );
+
+function add_theme_scripts() {
+  wp_enqueue_style( 'style', get_stylesheet_uri() );
+  wp_enqueue_style( 'general_css', get_template_directory_uri() . '/assets/css/general.css', array(), '1.1', 'all');
+
+  wp_register_script('functions_js', get_template_directory_uri() .'/assets/js/functions.js', array ('jquery'), '1.1', false);
+  wp_enqueue_script('functions_js');
+}
+add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
