@@ -1,17 +1,17 @@
 <?php 
 	add_action('init', function(){
 		$labels = array(
-			'name'          => 'Podcasts',
-			'singular_name' => 'Podcast',
-			'add_new'       => 'Nuevo Podcast',
-			'add_new_item'  => 'Nuevo Podcast',
-			'edit_item'     => 'Editar Podcast',
-			'new_item'      => 'Nuevo Podcast',
-			'all_items'     => 'Todas',
-			'view_item'     => 'Ver Podcast',
-			'search_items'  => 'Buscar Podcast',
+			'name'          => 'Viajes',
+			'singular_name' => 'Viaje',
+			'add_new'       => 'Nuevo Viaje',
+			'add_new_item'  => 'Nuevo Viaje',
+			'edit_item'     => 'Editar Viaje',
+			'new_item'      => 'Nuevo Viaje',
+			'all_items'     => 'Todos',
+			'view_item'     => 'Ver Viaje',
+			'search_items'  => 'Buscar Viaje',
 			'not_found'     => 'No se encontró',
-			'menu_name'     => 'Podcasts'
+			'menu_name'     => 'Viajes'
 		);
 
 		$args = array(
@@ -21,17 +21,17 @@
 			'show_ui'            => true,
 			'show_in_menu'       => true,
 			'query_var'          => true,
-			'rewrite'            => array( 'slug' => 'podcasts' ),
+			'rewrite'            => array( 'slug' => 'viajes' ),
 			'capability_type'    => 'post',
 			'has_archive'        => true,
-			'menu_icon'			 => 'dashicons-admin-network',
+			'menu_icon'			 => 'dashicons-palmtree',
 			'hierarchical'       => false,
 			'menu_position'      => 2,
 			'show_in_rest'		 => true,
-			'rest_base'			 => 'podcasts',
+			'rest_base'			 => 'viajes',
 			'taxonomies'         => array( 'category' ),
 			'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt', 'author' )
 		);
-		register_post_type('podcasts', $args);
+		register_post_type('viajes', $args);
 
 	});

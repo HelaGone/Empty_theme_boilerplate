@@ -17,7 +17,7 @@ if(!function_exists('headless_setup')){
 add_action( 'after_setup_theme', 'headless_setup' );
 
 function headless_add_support_for_cpt() {
-	add_post_type_support( 'podcasts', 'custom-fields' );
+	add_post_type_support( 'viajes', 'custom-fields' );
 }
 add_action( 'init', 'headless_add_support_for_cpt' );
 
@@ -28,12 +28,10 @@ $args1 = array(
     'single'       => true,
     'show_in_rest' => true,
 );
-register_meta( $object_type, 'podcast_url_meta', $args1 );
-register_meta( $object_type, 'podcast_dur_meta', $args1 );
+register_meta( $object_type, 'travel_price_meta', $args1 );
 
-register_meta( $object_type, 'podcast_video_url_meta', $args1 );
-register_meta( $object_type, 'podcast_video_dur_meta', $args1 );
 
+// REGISTER AND ENQUEUE STYLES AND SCRIPTS ///////////////////////////////////////////////
 function add_theme_scripts() {
   wp_enqueue_style( 'style', get_stylesheet_uri() );
   wp_enqueue_style( 'general_css', get_template_directory_uri() . '/assets/css/general.css', array(), '1.1', 'all');
